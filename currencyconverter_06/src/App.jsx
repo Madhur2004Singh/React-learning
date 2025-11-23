@@ -40,8 +40,8 @@ function App() {
                 label="from"
                 amount={amount}
                 currencyOptions={Options}
-                onCurrencyChange={(currency) => setFrom(currency)} // Should probably be setFrom, but kept logic close to yours
-                selectCurrency={from} // Changed selectedCurrency to selectCurrency (standard prop name check)
+                onCurrencyChange={(currency) => setFrom(currency)} 
+                selectCurrency={from} 
                 onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
