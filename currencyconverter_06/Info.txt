@@ -1,36 +1,4 @@
-1. InputBox.jsx code Explain
 
-Key Concepts Explained
-1. useId() Hook
-
-Purpose: Accessibility.
-
-How it works: Generates a unique ID (like :r1:). We link the <label> to the <input> using this ID. This ensures that clicking the word "From" automatically activates the input box next to it.
-
-2. Handling Numbers (onChange)
-
-The Issue: HTML inputs always return text strings (e.g., "100").
-
-The Fix: Number(e.target.value) converts the string back to a math-ready number.
-
-The "037" Bug: Without Number(), typing 7 next to 0 results in "07" (string). With Number(), 07 becomes 7.
-
-3. The Dropdown Logic (.map)
-
-Purpose: To create the list of currencies automatically without writing 100 <option> tags manually.
-
-The Bug We Fixed: We originally had <option></option>. We added {currency} inside the tag so the user can actually see the text (e.g., "USD").
-
-The Key: key={currency} is required by React to track items efficiently if the list order changes.
-
-4. Controlled Dropdown (value={selectCurrency})
-
-Purpose: To make the "Swap" feature work visually.
-
-Logic: It locks the dropdown display to the variable passed from the parent. If App.jsx changes the variable from "usd" to "inr", this line forces the dropdown to switch to "inr".
-
-
-2.App.jsx code explained
 
 Here is a comprehensive breakdown of your project. You can save this as a reference guide. It covers the final corrected code and explains every logic concept we discussed, from State Snapshots to Controlled Components.
 
